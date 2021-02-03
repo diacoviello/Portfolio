@@ -152,10 +152,12 @@ nav a:hover {
 footer {
   background-color: rgb(122, 22, 72);
   font-size: 35px;
+  color: #fff;
   font-family: Trattatello, fantasy;
   text-align: center;
   padding: 20px;
 }
+
 
 /* Responsive coding lines for different devices. */
 
