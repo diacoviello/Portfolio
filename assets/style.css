@@ -1,12 +1,11 @@
   header {
-    display: flex;
     justify-content: space-between;
     padding: 1%;
   }
 
 #header-background {
   width: 100%;
-  height: 300px;
+  height: 10rem;
   background: url("https://miro.medium.com/max/3200/0*hsfWRl_6IF7snkgT"); 
   background-size: cover;
 }
@@ -16,84 +15,124 @@
   text-align: bottom;
 }
 
-  h1 {
-    font-size: 300%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-style: italic;
-    color: #fff;
-  }
+h1 {
+  display: flex;
+  font-size: 300%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+  color: #fff;
+}
 
-  nav {
-    position: relative; 
-    right: 0; 
-    bottom: 0; 
-    float: right;
-    padding: 5px;
-    margin-top: 20px;
-  }
+nav {
+  display: flex;
+  position: relative; 
+  right: 0; 
+  bottom: 0; 
+  float: right;
+  padding: 5px;
+  margin-top: 20px;
+}  
 
-  nav ul {
-    display: flex;
-    justify-content: space-between;
-    min-width: 300px;
-    bottom: 8px;
-    right: 16px;
-    font-size: 20px;
-  }
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  min-width: 300px;
+  bottom: 8px;
+  right: 16px;
+  font-size: 20px;
+}  
   
-  nav a {
-    background-color: unset;
-    color: #fff;
-    font-weight: bold;
-    text-decoration: none;
-  }
+nav a {
+  background-color: unset;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}  
  
-  nav a:hover {
-    color: cornflowerblue;
-    Font-style: italic; 
-    text-decoration: underline;
-  }
+nav a:hover {
+  color: cornflowerblue;
+  Font-style: italic; 
+  text-decoration: underline;
+}  
 
 /* These lines are for the body of the site */
 
-/* this is the sidebar to the right with all the info about me and contact */
+  .flexmain {
+    display: flex;
+  } 
 
-.content {
-  padding: 20px;
-  clear: both;
-  float: right;
-  width: 20%;
-  height: 100%;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: rgb(122, 22, 72);
-}
+  /* these lines are for the Work section of the site */
 
-.content h2 {
-  margin-top: 18px;
-  margin-bottom: 18px;
-  padding: 15px;
-  text-align: center;
-  font-size: 36px;
-  color: #fff;
-  text-decoration: underline;
-}
+  .work {
+    width: 72%;
+    background-color: #fff;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 
-.content img {
-  margin: auto;
-  max-width: 200px;
-  max-height:200px;
-  display: block;
-  padding-bottom: 20px;
-}
+  .work-card {
+    width: 45%;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 25px;
+    padding: 10px;
+  }
 
-.content p {
-  color: #fff;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  padding: 5px;
-  text-align: center;
-  line-height: 1.5;
-}
+  .work-card h3 {
+    text-align: center;
+    font-size: 50px;
+    font-family: cursive;
+    text-decoration: bold;
+  } 
 
+  .work-card img {
+    object-fit: fill;
+    border-radius: 5%;
+    object-fit: scale-down;
+  }
+
+  /* this is the sidebar to the right with all the info about me and contact */
+
+  .content {
+    width: 28%;
+    padding: 20px;
+    clear: both;
+    float: right;
+    height: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(122, 22, 72);
+  }
+
+  .content h2 {
+    margin-top: 18px;
+    margin-bottom: 18px;
+    padding: 15px;
+    text-align: center;
+    font-size: 36px;
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .content img {
+    margin: auto;
+    max-width: 200px;
+    max-height: 200px;
+    display: block;
+    padding-bottom: 20px;
+  }
+
+  .content p {
+    color: #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 5px;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+/* this is the Contact me cards for each linked icon */
 .right-card {
   float: left;
   width: 50%;
@@ -102,4 +141,22 @@
 }
 
 
-/* This is for the footer of the page *
+/* /* This is for the footer of the page * */
+
+
+/* Responsive coding lines for different devices. */
+
+@media screen and (max-width: 900px) {
+  .flexmain {
+    flex-direction: column-reverse;
+  }
+  .content {
+    width: 100%;
+  }
+  .work {
+    width: 100%;
+  }
+  .work-card {
+    width: 100%;
+  }
+}
